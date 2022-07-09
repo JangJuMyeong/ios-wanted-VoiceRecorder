@@ -65,6 +65,7 @@ class RecordingViewController: UIViewController {
             
             if recordTimer != nil {
                 recordTimer.invalidate()
+                waveformView.resetWaves(scrollview: self.scrollView)
                 scrollView.setContentOffset(CGPoint(x: waveformView.frame.minX, y: 0.0), animated:false)
             }
             
